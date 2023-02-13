@@ -1,0 +1,76 @@
+body{
+    background-color: #ef83dc;
+    margin:0;
+}
+form{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width:100%;
+    display: flex;
+    justify-content: center;
+}
+label{
+    cursor:pointer;
+}
+#chooseFile{
+    display:none; 
+    /* display:none => 레이아웃에 영향 x  visibilty:hidden => 레이아웃에 영향 o */
+}
+.container{
+    background-color: white;
+    padding-top: 3%;
+    display: flex;
+    width:100%;
+    align-self:center;
+    justify-content: center;
+}
+.cont,.cont2{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    visibility:hidden;
+}
+.imgcont{
+    width:400px;
+}
+#img{
+   object-fit:contain;
+}
+.btn:not(#email){
+    background: #ededed;
+    border:none;
+    border-radius: 10px;
+    font-family: Georgia;
+    color:black;
+    font-size: 15px;
+    width:65px;
+    height:30px;
+    margin: 20px;
+}
+.btn:hover{
+    background: #c3c3c3;
+}
+#spinner{
+    width:50px;
+    height:50px;
+}
+textarea{
+    resize: none;
+    width: 400px;
+    height: 500px;
+    border:1px solid gray;
+}
+a,#email{
+    color:black;
+    background:none;
+    cursor:pointer;
+    border:none;
+    font-size:15px;
+    padding:15px;
+    margin:4px;
+}
+.footer{
+    display: flex;
+    justify-content: center;
+}
