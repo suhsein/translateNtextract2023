@@ -43,5 +43,4 @@ window.onload = function() {
     };
     $copy.addEventListener('click', msg);
     $email.addEventListener('click', msg);
-
 };
