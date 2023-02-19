@@ -12,6 +12,7 @@
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script>
     <script type="text/javascript" src="./bundle/main.js"></script>
+    <script type="text/javascript" src="./js/textract.js"></script>
     <form action="post" enctype="multipart/form-data">
         <label for="chooseFile">😎choose File</label>
         <input id="chooseFile" name="chooseFile" type="file" accept=".jpg, .png" >
@@ -32,52 +33,5 @@
         <a href="https://instagram.com/suhsein" target="_blank"><i class="icon-instagram"></i></a>
         <button class="btn" id="email" data-clipboard-text="mini9075@naver.com"><i class="icon-at"></i></button>
     </div>
-    <script>
-        $chooseFile = document.querySelector('#chooseFile');
-        $imgcont = document.querySelector('.imgcont');
-        $txtarea = document.querySelector('#txtarea');
-        $spinner = document.querySelector('#spinner');
-        $textract = document.querySelector('#textract');
-        $copy = document.querySelector('#copy');
-        $email = document.querySelector('#email');
-
-        let view;
-        // textractor의 input param으로 넘겨줌. input type => Buffer, Typed Array, Blob, String
-
-        $chooseFile.addEventListener('change', async () =>{
-            $('.imgcont').empty();
-            let file = $chooseFile.files[0];
-            let buffer;
-            await file.arrayBuffer().then(function(result) { buffer = result; });
-            view = new Uint8Array(buffer);
-            // file 객체를 arraybuffer로 변환 후, arraybuffer 타입 buffer로부터 typed array를 view 변수에 저장함.
-
-            let img = document.createElement('img');
-            img.setAttribute('class', 'imgcont');
-
-            let imgsrc = URL.createObjectURL(file);
-            img.src = imgsrc;
-
-            $imgcont.appendChild(img);
-            $('.imgcont').css({
-                "border":"0"
-            });
-            $('#textract, #txtarea, #copy').css({
-                "visibility":"visible"
-            })
-        });
-
-        $textract.addEventListener('click', () => {  
-            myLibrary.textractor(view);
-        });
-
-        new ClipboardJS('.btn');
-        function msg() {
-            alert('복사되었습니다.');
-        };
-        $copy.addEventListener('click', msg);
-        $email.addEventListener('click', msg);
-
-    </script>
 </body>
 </html>

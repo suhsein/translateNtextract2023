@@ -44,10 +44,8 @@ const textractor = async (buffer) => {
         // text 추출 완료 시까지 spinner가 보이게 함.
 
         const textracted = await textractClient.send(new DetectDocumentTextCommand({Document : { Bytes : buffer }}));
-        console.log(textracted);
         textracted.Blocks.forEach((block)=> {
             if(block.BlockType === 'LINE') {
-                console.log(block.Text);
                 $txtarea.value += (block.Text + '\n');
             }
         });

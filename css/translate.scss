@@ -1,12 +1,11 @@
 *{
-    margin:10px;
-    padding:4px;
     text-align: center;
     box-sizing: border-box;
 }
 #description{
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 2rem;
+    padding:30px;
 }
 html{
 display:flex;
@@ -17,8 +16,18 @@ background-color: #69bd79;
         padding:0px;
         margin:0px;
 }
+.select2-container{
+    margin-left: 60px;
+}
+.select2-container--default .select2-selection--single{
+    margin-left:60px;
+}
 .selection{
-    align-items: baseline;
+    padding: 0px 0px 30px;
+    // align-items: baseline;
+}
+#change,#tran{
+    margin-left:60px;
 }
 textarea{
 resize:none;
@@ -26,6 +35,7 @@ width:350px;
 height:400px;
 }
 select{
+    width:200px;
     border:none;
     border-radius:3px;
 }
@@ -35,8 +45,10 @@ select{
     color:black;
     font-size: 15px;
     cursor:pointer;
+    margin-top:20px;
 }
 .container,.container2{
+    margin:10px;
     display:flex;
     flex-direction:column;
     align-items: center;
@@ -44,9 +56,15 @@ select{
 .textareas{
     display:flex;
     background-color: white;
-    padding:10px;
+    padding:20px 20px 10px;
     border-radius:8px;
 }
 a{
     color:black;
+}
+.footer{
+    padding:10px;
+}
+.footer>*{
+    margin:20px;
 }
