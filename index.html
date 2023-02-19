@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+</head>
+<body>
+    <button id="translate">translate</button>
+    <button id="textract">textract</button>
+</body>
+<script>
+    $translate = document.querySelector('#translate');
+    $textract = document.querySelector('#textract');
+
+    $translate.addEventListener('click', ()=>{
+        window.location.href = './translate.html';
+    });
+    $textract.addEventListener('click', ()=>{
+        window.location.href = './textract.html';
+    })
+
+</script>
+</html>
