@@ -2,9 +2,9 @@
 
 ## Table of Contents
 1. [💻프로젝트 소개](#프로젝트-소개)
-2. [⚙️기술 스택](#⚙️기술-스택)
+2. [⚙️기술 스택](#%EF%B8%8F기술-스택)
 3. [⌛개발 기간](#개발-기간)
-4. [🛠️Trouble Shooting](#🛠️trouble-shooting)
+4. [🛠️Trouble Shooting](#%EF%B8%8trouble-shooting)
 5. [👩🏻‍🏫AWS SDK V3 사용법](#AWS-SDK-V3-사용법)
 6. [Takeaway](#Takeaway)
 
