@@ -2,11 +2,11 @@
 
 ## Table of Contents
 1. [💻프로젝트 소개](#프로젝트-소개)
-2. [⚙️기술 스택](#기술-스택)
+2. [⚙️기술 스택](#⚙️기술-스택)
 3. [⌛개발 기간](#개발-기간)
-3. [🛠️Trouble Shooting](#trouble-shooting)
-4. [👩🏻‍🏫AWS SDK V3 사용법](#AWS-SDK-V3-사용법)
-5. [Takeaway](#Takeaway)
+4. [🛠️Trouble Shooting](#🛠️trouble-shooting)
+5. [👩🏻‍🏫AWS SDK V3 사용법](#AWS-SDK-V3-사용법)
+6. [Takeaway](#Takeaway)
 
 ## 💻프로젝트 소개
 
@@ -43,7 +43,6 @@
    * dropzone에 파일을 업로드 하고 시작언어와 도착언어를 선택한 후, Go 버튼을 누르면 텍스트 추출 및 번역을 진행하여 좌측 Textarea에는 추출한 텍스트를, 우측 Textarea에는 번역된 텍스트를 표시합니다.
     
 ## ⚙️기술 스택
-
 <img alt="HTML5" src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white"> <img alt="CSS3" src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white"> 
 <img alt="JS" src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
 <img alt="jQuery" src="https://img.shields.io/badge/jquery-0769AD?style=for-the-badge&logo=jquery&logoColor=white">
@@ -56,6 +55,7 @@
 * 2023.02.05~2023.02.26 (3주)
 
 ## 🛠️Trouble Shooting
+
 > **AWS SDK 사용과 관련된 문제**
 문제점
 * 기존에는 IAM User만 생성하여 AWS SDK V2를 이용했었는데, User Acces Key Id와 secret Access key를 **하드코딩**했었다.
