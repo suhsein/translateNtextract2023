@@ -5,7 +5,7 @@
 2. [⚙️기술 스택](#기술-스택)
 3. [⌛개발 기간](#개발-기간)
 3. [🛠️Trouble Shooting](#trouble-shooting)
-4. [👩🏻‍🏫AWS SDK 사용법](#AWS-SDK-사용법)
+4. [👩🏻‍🏫AWS SDK V3 사용법](#AWS-SDK-V3-사용법)
 5. [Takeaway](#Takeaway)
 
 ## 💻프로젝트 소개
