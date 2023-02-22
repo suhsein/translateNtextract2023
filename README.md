@@ -1,11 +1,11 @@
 # translateNtextract2023
 
 ## Table of Contents
-1. [💻프로젝트 소개](#프로젝트소개)
-2. [⚙️기술 스택](#기술스택)
-3. [⌛개발 기간](#개발기간)
-3. [🛠️Trouble Shooting](#troubleshooting)
-4. [👩🏻‍🏫AWS SDK 사용법](#AWS_SDK)
+1. [💻프로젝트 소개](#프로젝트-소개)
+2. [⚙️기술 스택](#기술-스택)
+3. [⌛개발 기간](#개발-기간)
+3. [🛠️Trouble Shooting](#trouble-shooting)
+4. [👩🏻‍🏫AWS SDK 사용법](#AWS-SDK-사용법)
 5. [Takeaway](#Takeaway)
 
 ## 💻프로젝트 소개
