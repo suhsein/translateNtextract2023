@@ -1,26 +1,53 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="upgrade-insecure-requests"
+    />
+    <link
+      rel="stylesheet"
+      href="fontello-422b51b4/fontello-422b51b4/css/fontello.css"
+    />
     <title>index</title>
-</head>
-<body>
-    <button id="translate">translate</button>
-    <button id="textract">textract</button>
-</body>
-<script>
-    $translate = document.querySelector('#translate');
-    $textract = document.querySelector('#textract');
-
-    $translate.addEventListener('click', ()=>{
-        window.open('./translate.html', target='_blank');
-    });
-    $textract.addEventListener('click', ()=>{
-        window.open('./textract.html', target='_blank');
-    })
-
-</script>
+    <link rel="stylesheet" href="./css/index.css">
+  </head>
+  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script>
+    <script type="text/javascript" src="./js/index.js"></script>
+    <div class="title">translateNtextract2023</div>
+    <div class="header">
+      Textract and translate your image file
+    </div>
+    <div class="main">
+      <div class="cont">
+        <button id="translate">translate</button>
+        <label id="l_translate" for="translate">translate</label>
+      </div>
+      <div class="cont">
+        <button id="textract">textract</button>
+        <label id="l_textract" for="textract">textract</label>
+      </div>
+      <div class="cont">
+        <button id="translateNtextract">translateNtextract</button>
+        <label id="l_translateNtextract" for="translateNtextract"
+          >translateNtextract</label
+        >
+      </div>
+    </div>
+    <div class="footer">
+      <a href="https://github.com/suhsein" target="_blank"
+        ><i class="icon-github"></i
+      ></a>
+      <a href="https://instagram.com/suhsein" target="_blank"
+        ><i class="icon-instagram"></i
+      ></a>
+      <button class="btn" id="email" data-clipboard-text="mini9075@naver.com">
+        <i class="icon-at"></i>
+      </button>
+    </div>
+  </body>
 </html>

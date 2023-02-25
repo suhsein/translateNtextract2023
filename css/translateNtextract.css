@@ -1,0 +1,109 @@
+* {
+  text-align: center;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(255, 212, 255);
+  animation: fadein 700ms !important;
+  -moz-animation: fadein 700ms !important;
+  /* Firefox */
+  -webkit-animation: fadein 700ms !important;
+  /* Safari and Chrome */
+  -o-animation: fadein 700ms !important;
+  /* Opera */
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.selection {
+  padding: 30px 0px 40px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+}
+
+.container2 {
+  display: flex;
+  width: 800px;
+  height: 400px;
+  justify-content: center;
+}
+
+.startcont, .endcont {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.select2-container--default .select2-selection--single {
+  background-color: rgb(241, 255, 195) !important;
+}
+
+.select2-results {
+  background-color: rgb(241, 255, 195) !important;
+}
+
+.dropzone {
+  width: 800px;
+  font-size: 1rem;
+  line-height: 4rem;
+  padding: 0px !important;
+  border: dotted 3px gray !important;
+  background-color: rgb(241, 255, 195) !important;
+  border-radius: 20px !important;
+}
+
+.dropzone .dz-preview.dz-image-preview {
+  background: transparent !important;
+}
+
+textarea {
+  height: 90%;
+  resize: none;
+  border: 3px dotted gray;
+  margin: 20px 0px 10px;
+  background-color: rgb(241, 255, 195);
+}
+
+#start {
+  border-radius: 10px 0px 0px 10px;
+}
+
+#end {
+  border-radius: 0px 10px 10px 0px;
+}
+
+.footer > * {
+  margin: 20px 20px 0px;
+  color: black;
+}
+
+#des {
+  color: gray;
+  font-size: 10px;
+}
+
+.btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+#spinner {
+  width: 50px;
+  height: 50px;
+  align-self: center;
+  visibility: hidden;
+}/*# sourceMappingURL=translateNtextract.css.map */

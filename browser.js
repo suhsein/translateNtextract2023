@@ -30,7 +30,7 @@ const translator = async (startlang, endlang, line) => {
             Text: line
         }
         const translated = await translateClient.send(new TranslateTextCommand(params));
-        document.querySelector('#end').value = translated.TranslatedText;
+        $end.value = translated.TranslatedText;
     } catch (err){
         console.error(err);
     }
@@ -57,4 +57,36 @@ const textractor = async (buffer) => {
     }
 };
 
-export { translator, textractor };
+const trNtr = async (startlang, endlang, buffer) => {
+    try {
+        // $textract.setAttribute('disabled', 'true');
+        // $txtarea.value = '';
+        $spinner.style.visibility = 'visible';
+        // text 추출 완료 시까지 spinner가 보이게 함.
+        let line = '';
+
+        const textracted = await textractClient.send(new DetectDocumentTextCommand({Document : { Bytes : buffer }}));
+        textracted.Blocks.forEach((block)=> {
+            if(block.BlockType === 'LINE') {
+                console.log(block.Text);
+                line += (block.Text + '\n');
+                // $txtarea.value += (block.Text + '\n');
+            }
+        });
+        
+        const params = {
+            SourceLanguageCode:startlang,
+            TargetLanguageCode:endlang,
+            Text: line
+        };
+
+        const translated = await translateClient.send(new TranslateTextCommand(params));
+        $start.value = line;
+        $end.value = translated.TranslatedText;
+    //    $textract.removeAttribute('disabled');
+        $spinner.style.visibility = 'hidden';
+    } catch (err){
+        console.error(err);
+    }
+}
+export { translator, textractor, trNtr };

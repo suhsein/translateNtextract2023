@@ -1,0 +1,121 @@
+*:not(.title) {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+  }
+  .title,
+  .header,
+  .main,
+  .cont,
+  .footer {
+    animation: fadein 1.5s;
+    -moz-animation: fadein 1.5s;
+    /* Firefox */
+    -webkit-animation: fadein 1.5s;
+    /* Safari and Chrome */
+    -o-animation: fadein 1.5s;
+    /* Opera */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @-moz-keyframes fadein {
+    /* Firefox */
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes fadein {
+    /* Safari and Chrome */
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @-o-keyframes fadein {
+    /* Opera */
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  .title {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 3rem;
+  }
+  .header {
+    margin-top: 3vh;
+  }
+  .cont {
+    width: 33vw;
+    height: 70vh;
+  }
+  button:not(.btn) {
+    display: none;
+  }
+  #l_translate {
+    background-color: #69bd79;
+    cursor: pointer;
+    border-radius: 30px;
+    padding: 10px;
+    font-size: 2rem;
+  }
+  #l_translate:hover {
+    background-color: #95d0a0;
+  }
+  #l_textract {
+    background-color: #ef83dc;
+    cursor: pointer;
+    border-radius: 30px;
+    padding: 10px;
+    font-size: 2rem;
+  }
+  #l_textract:hover {
+    background-color: #f09ee1;
+  }
+  #l_translateNtextract {
+    background-color: rgb(241, 255, 195);
+    border: 3px solid rgb(255, 212, 255);
+    cursor: pointer;
+    border-radius: 30px;
+    padding: 10px;
+    font-size: 2rem;
+  }
+  #l_translateNtextract:hover {
+    background-color: rgb(231, 255, 153);
+  }
+  .btn {
+    background: none;
+    border: none;
+    color: black;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  a {
+    color: black;
+  }
+  .footer {
+    padding: 3vh;
+  }
+  .footer > * {
+    margin: 20px;
+  }
