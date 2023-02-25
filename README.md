@@ -12,6 +12,7 @@
 
 * aws sdk를 사용해 개발한 번역과 텍스트 추출 웹사이트입니다.
 
+* [배포 링크](https://suhsein.github.io/translateNtextract2023/index.html)
 > **Translate**
 
     * AWS Translate에서 지원하는 모든 언어를 Javascript를 통해 동적으로 등록했습니다.
