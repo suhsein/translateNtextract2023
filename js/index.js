@@ -2,6 +2,7 @@ window.onload = function() {
   $translate = document.querySelector("#translate");
   $textract = document.querySelector("#textract");
   $translateNtextract = document.querySelector("#translateNtextract");
+  $email = document.querySelector('#email');
 
   $translate.addEventListener("click", () => {
     window.open("./translate.html", (target = "_blank"));

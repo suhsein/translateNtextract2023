@@ -33,26 +33,6 @@ $(document).ready(function () {
 $("#endlang").select2();
 });
 
-Dropzone.autodiscover = false;
-Dropzone.options.dz = {
-maxFiles:1,
-init:function(){
-    this.on('maxfilesexceeded', function(file){
-        this.removeAllFiles();
-        this.addFile(file);
-    })
-    this.on('addedfile', async function(file){
-        let buffer;
-        await file.arrayBuffer().then(function(result){ buffer = result; });
-        view = new Uint8Array(buffer);
-    })
-},
-url:'./translateNtextract.html',
-acceptedFiles: ".jpeg,.jpg,.png,.JPEG,.JPG,.PNG",
-uploadMultiple: false,
-dictDefaultMessage: "Drop file here or click to upload",
-}
-
 $tran.addEventListener('click', ()=> {
 startlang = $startlang.value;
 endlang = $endlang.value;

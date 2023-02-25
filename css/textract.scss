@@ -51,11 +51,13 @@ form{
     margin-top: 20px;
     margin-bottom: 20px;
     width:100%;
-    display: flex;
-    justify-content: center;
+}
+form,.container,.footer,.cont,.cont2{
+  display: flex;
+  justify-content: center;
 }
 label{
-    cursor:pointer;
+  cursor:pointer;
 }
 #chooseFile{
     display:none; 
@@ -70,10 +72,8 @@ label{
     justify-content: center;
 }
 .cont,.cont2{
-    display:flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     visibility:hidden;
 }
 .imgcont{
@@ -88,13 +88,14 @@ label{
     border-radius: 10px;
     font-family: Georgia;
     color:black;
+    cursor: pointer;
     font-size: 15px;
     width:65px;
     height:30px;
     margin: 20px;
 }
-.btn:hover{
-    background: #c3c3c3;
+#textract:hover,#copy:hover{
+    background-color: #b7aaaa;
 }
 #spinner{
     width:50px;
@@ -106,16 +107,20 @@ textarea{
     height: 500px;
     border:1px solid gray;
 }
-a,#email{
+a{
+  color:black;
+}
+#email{
     color:black;
     background:none;
     cursor:pointer;
     border:none;
     font-size:15px;
-    padding:15px;
-    margin:4px;
 }
 .footer{
     display: flex;
     justify-content: center;
+}
+.footer>*{
+  margin:20px;
 }
