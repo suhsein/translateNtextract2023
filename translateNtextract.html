@@ -34,7 +34,7 @@
          <button class="btn" id="tran">Go!</button>
     </div>
     <div class="container">
-        <form action="/target" method="post" class="dropzone" id="dz"></form>
+        <form action="/target" class="dropzone" method="post" enctype="multipart/form-data" id="dz"></form>
         <div id="des">* .jpg .png</div>
         <div class="container2">
             <div class="startcont"> 
@@ -55,7 +55,6 @@
     </div>
 </body>
 <script>
-    Dropzone.autodiscover = false;
     Dropzone.options.dz = {
     maxFiles:1,
     init:function(){
@@ -70,7 +69,6 @@
         })
     },
     url:'./translateNtextract.html',
-    method:'post',
     acceptedFiles: ".jpeg,.jpg,.png,.JPEG,.JPG,.PNG",
     uploadMultiple: false,
     dictDefaultMessage: "Drop file here or click to upload",
