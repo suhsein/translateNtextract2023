@@ -34,8 +34,12 @@
          <button class="btn" id="tran">Go!</button>
     </div>
     <div class="container">
-        <form action="/target" class="dropzone" method="post" enctype="multipart/form-data" id="dz"></form>
-        <div id="des">* .jpg .png</div>
+        <!-- <form action="/target" class="dropzone" method="post" enctype="multipart/form-data" id="dz"></form> -->
+        <div class="imgcont">
+        </div>
+        <label for="chooseFile">😎choose File</label>
+        <input id="chooseFile" name="chooseFile" type="file" accept=".jpeg,.jpg,.png,.JPEG,.JPG,.PNG" >
+        <div id="des" style="display:inline-block">* .jpg .png</div>
         <div class="container2">
             <div class="startcont"> 
                 <textarea readonly id="start" cols="30" rows="10"></textarea>
@@ -55,23 +59,24 @@
     </div>
 </body>
 <script>
-    Dropzone.options.dz = {
-    maxFiles:1,
-    init:function(){
-        this.on('maxfilesexceeded', function(file){
-            this.removeAllFiles();
-            this.addFile(file);
-        })
-        this.on('addedfile', async function(file){
-            let buffer;
-            await file.arrayBuffer().then(function(result){ buffer = result; });
-            view = new Uint8Array(buffer);
-        })
-    },
-    url:'./translateNtextract.html',
-    acceptedFiles: ".jpeg,.jpg,.png,.JPEG,.JPG,.PNG",
-    uploadMultiple: false,
-    dictDefaultMessage: "Drop file here or click to upload",
-    }
+    // Dropzone.options.dz = {
+    // maxFiles:1,
+    // init:function(){
+    //     this.on('maxfilesexceeded', function(file){
+    //         this.removeAllFiles();
+    //         this.addFile(file);
+    //     })
+    //     this.on('addedfile', async function(file){
+    //         let buffer;
+    //         await file.arrayBuffer().then(function(result){ buffer = result; });
+    //         view = new Uint8Array(buffer);
+    //     })
+    // },
+    // url:'./translateNtextract.html',
+    // acceptedFiles: ".jpeg,.jpg,.png,.JPEG,.JPG,.PNG",
+    // uploadMultiple: false,
+    // forceFallback: true,
+    // dictDefaultMessage: "Drop file here or click to upload",
+    // }
 </script>
 </html>

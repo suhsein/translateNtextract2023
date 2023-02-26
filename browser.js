@@ -59,8 +59,8 @@ const textractor = async (buffer) => {
 
 const trNtr = async (startlang, endlang, buffer) => {
     try {
-        // $textract.setAttribute('disabled', 'true');
-        // $txtarea.value = '';
+        $start.value = '';
+        $end.value = '';
         $spinner.style.visibility = 'visible';
         // text 추출 완료 시까지 spinner가 보이게 함.
         let line = '';
@@ -83,7 +83,6 @@ const trNtr = async (startlang, endlang, buffer) => {
         const translated = await translateClient.send(new TranslateTextCommand(params));
         $start.value = line;
         $end.value = translated.TranslatedText;
-    //    $textract.removeAttribute('disabled');
         $spinner.style.visibility = 'hidden';
     } catch (err){
         console.error(err);

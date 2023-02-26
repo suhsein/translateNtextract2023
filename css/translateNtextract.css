@@ -5,12 +5,12 @@
 
 body {
   background-color: rgb(255, 212, 255);
-  animation: fadein 700ms !important;
-  -moz-animation: fadein 700ms !important;
+  animation: fadein 300ms;
+  -moz-animation: fadein 300ms;
   /* Firefox */
-  -webkit-animation: fadein 700ms !important;
+  -webkit-animation: fadein 300ms;
   /* Safari and Chrome */
-  -o-animation: fadein 700ms !important;
+  -o-animation: fadein 300ms;
   /* Opera */
 }
 
@@ -23,26 +23,26 @@ body {
   }
 }
 .selection {
-  padding: 30px 0px 40px;
+  padding: 30px 0px 30px;
+}
+
+.container, .container2, .startcont, .endcont, .imgcont {
+  display: flex;
+  justify-content: center;
 }
 
 .container {
-  display: flex;
   flex-direction: column;
   align-items: center;
-  justify-items: center;
 }
 
 .container2 {
-  display: flex;
   width: 800px;
   height: 400px;
-  justify-content: center;
 }
 
 .startcont, .endcont {
   width: 400px;
-  display: flex;
   flex-direction: column;
 }
 
@@ -54,18 +54,29 @@ body {
   background-color: rgb(241, 255, 195) !important;
 }
 
-.dropzone {
-  width: 800px;
+.imgcont {
+  width: 52vw;
+  height: 20vh;
+  align-items: center;
   font-size: 1rem;
   line-height: 4rem;
-  padding: 0px !important;
-  border: dotted 3px gray !important;
-  background-color: rgb(241, 255, 195) !important;
-  border-radius: 20px !important;
+  padding: 0px;
+  border: dotted 3px gray;
+  background-color: rgb(241, 255, 195);
+  border-radius: 20px;
 }
 
-.dropzone .dz-preview.dz-image-preview {
-  background: transparent !important;
+#chooseFile {
+  display: none;
+}
+
+label {
+  cursor: pointer;
+}
+
+#img {
+  height: 8vw;
+  aspect-ratio: auto;
 }
 
 textarea {

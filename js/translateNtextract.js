@@ -1,4 +1,6 @@
 window.onload = function() {
+$chooseFile = document.querySelector('#chooseFile');
+$imgcont = document.querySelector('.imgcont');
 $startlang = document.querySelector('#startlang');
 $endlang = document.querySelector('#endlang');
 $tran =  document.querySelector('#tran');
@@ -31,6 +33,22 @@ $("#startlang").select2();
 
 $(document).ready(function () {
 $("#endlang").select2();
+});
+
+$chooseFile.addEventListener('change', async () =>{
+    $('.imgcont').empty();
+    let file = $chooseFile.files[0];
+    let buffer;
+    await file.arrayBuffer().then(function(result) { buffer = result; });
+    view = new Uint8Array(buffer);
+    // file 객체를 arraybuffer로 변환 후, arraybuffer 타입 buffer로부터 typed array를 view 변수에 저장함.
+
+    let img = document.createElement('img');
+    img.setAttribute('id', 'img');
+    let imgsrc = URL.createObjectURL(file);
+    img.src = imgsrc;
+
+    $imgcont.appendChild(img);
 });
 
 $tran.addEventListener('click', ()=> {
