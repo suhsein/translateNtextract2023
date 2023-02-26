@@ -12,7 +12,7 @@
 
 * aws sdk를 사용해 개발한 번역과 텍스트 추출 웹사이트입니다.
 
-* [배포 링크](https://suhsein.github.io/translateNtextract2023/index.html)
+* [Demo](https://suhsein.github.io/translateNtextract2023/index.html)
 > **Translate**
 
     * AWS Translate에서 지원하는 모든 언어를 Javascript를 통해 동적으로 등록했습니다.
@@ -37,11 +37,10 @@
  
  > **translateNtextract**
  
-    * dropzone 라이브러리를 사용해 파일을 드롭하거나 클릭하여 업로드할 수 있도록 했습니다. (jpg와 png 파일로 제한했습니다.)
     * 시작언어는 textract에서 지원하는 5개국 언어로 제한되므로, Translate과 다르게 change 버튼을 제거했습니다.
     
  <사용방법>
-   * dropzone에 파일을 업로드 하고 시작언어와 도착언어를 선택한 후, Go 버튼을 누르면 텍스트 추출 및 번역을 진행하여 좌측 Textarea에는 추출한 텍스트를, 우측 Textarea에는 번역된 텍스트를 표시합니다.
+   * choose File 라벨을 클릭하여 파일을 업로드 하고 시작언어와 도착언어를 선택한 후, Go 버튼을 누르면 텍스트 추출 및 번역을 진행하여 좌측 Textarea에는 추출한 텍스트를, 우측 Textarea에는 번역된 텍스트를 표시합니다.
     
 ## ⚙️기술 스택
 <img alt="HTML5" src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white"> <img alt="CSS3" src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white"> 
@@ -58,6 +57,7 @@
 ## 🛠️Trouble Shooting
 
 > **AWS SDK 사용과 관련된 문제**
+
 문제점
 * 기존에는 IAM User만 생성하여 AWS SDK V2를 이용했었는데, User Acces Key Id와 secret Access key를 **하드코딩**했었다.
 * 브라우저에서 사용하기 위해 AWS SDK를 이용할 시, **textract 기능은 AWS SDK V2의 사용이 제한**되어 있어서 AWS SDK V3를 사용할 필요가 있었다.
@@ -69,12 +69,14 @@
 AWS SDK V3의 사용법은 다음 차례에 기술했습니다.
 
 > **textract의 parameter 문제**
+
 문제점
 * textract의 param으로 들어가는 bytes 타입(Buffer, Typed Array, Blob, String)에 맞게 파일을 처리할 필요가 있었다.
 
 해결 방안
 
 =>  arrayBuffer()로 ArrayBuffer 객체를 생성하고, ArrayBuffer에 저장된 바이너리 데이터를 Uint8Array()로 TypedArray를 생성하여 parameter로 넘겨주었다.
+
 
 ## 👩🏻‍🏫AWS SDK V3 사용법
 * 공식 문서를 참고하여 개발하였습니다.
